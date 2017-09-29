@@ -1,0 +1,1 @@
+fichsave[{"nom":"ESSAI","adresse":"essai","solde":"200"}]

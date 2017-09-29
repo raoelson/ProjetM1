@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Services.com/" targetNamespace="http://Services.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="AddCategories" type="tns:AddCategories" />
+  <xs:element name="AddCategoriesResponse" type="tns:AddCategoriesResponse" />
+  <xs:element name="AddMedia" type="tns:AddMedia" />
+  <xs:element name="AddMediaResponse" type="tns:AddMediaResponse" />
+  <xs:element name="AddProduits" type="tns:AddProduits" />
+  <xs:element name="AddProduitsResponse" type="tns:AddProduitsResponse" />
+  <xs:element name="AdminVerify" type="tns:AdminVerify" />
+  <xs:element name="AdminVerifyResponse" type="tns:AdminVerifyResponse" />
+  <xs:element name="AdresseLivraison" type="tns:AdresseLivraison" />
+  <xs:element name="AdresseLivraisonResponse" type="tns:AdresseLivraisonResponse" />
+  <xs:element name="AdresseLivraisons" type="tns:AdresseLivraisons" />
+  <xs:element name="AdresseLivraisonsResponse" type="tns:AdresseLivraisonsResponse" />
+  <xs:element name="AdressesFacturations" type="tns:AdressesFacturations" />
+  <xs:element name="AdressesFacturationsResponse" type="tns:AdressesFacturationsResponse" />
+  <xs:element name="ComparaisonProduits" type="tns:ComparaisonProduits" />
+  <xs:element name="ComparaisonProduitsResponse" type="tns:ComparaisonProduitsResponse" />
+  <xs:element name="DeleteCategories" nillable="true" type="tns:deleteCategories" />
+  <xs:element name="DeleteCategoriesResponse" type="tns:DeleteCategoriesResponse" />
+  <xs:element name="DeleteProduits" type="tns:DeleteProduits" />
+  <xs:element name="DeleteProduitsResponse" type="tns:DeleteProduitsResponse" />
+  <xs:element name="FindProduit" type="tns:FindProduit" />
+  <xs:element name="FindProduitResponse" type="tns:FindProduitResponse" />
+  <xs:element name="ListSousCat" type="tns:ListSousCat" />
+  <xs:element name="ListSousCatResponse" type="tns:ListSousCatResponse" />
+  <xs:element name="ProduitsArray" type="tns:ProduitsArray" />
+  <xs:element name="ProduitsArrayResponse" type="tns:ProduitsArrayResponse" />
+  <xs:element name="RecuperationCommandes" type="tns:RecuperationCommandes" />
+  <xs:element name="RecuperationCommandesResponse" type="tns:RecuperationCommandesResponse" />
+  <xs:element name="SearchAdresseLivraison" type="tns:SearchAdresseLivraison" />
+  <xs:element name="SearchAdresseLivraisonResponse" type="tns:SearchAdresseLivraisonResponse" />
+  <xs:element name="SearchCategories" type="tns:SearchCategories" />
+  <xs:element name="SearchCategoriesResponse" type="tns:SearchCategoriesResponse" />
+  <xs:element name="SearchCommandesDetails" type="tns:SearchCommandesDetails" />
+  <xs:element name="SearchCommandesDetailsResponse" type="tns:SearchCommandesDetailsResponse" />
+  <xs:element name="SearchProduits" type="tns:SearchProduits" />
+  <xs:element name="SearchProduitsResponse" type="tns:SearchProduitsResponse" />
+  <xs:element name="SousCategoriesArray" type="tns:SousCategoriesArray" />
+  <xs:element name="SousCategoriesArrayResponse" type="tns:SousCategoriesArrayResponse" />
+  <xs:element name="addCommandes" type="tns:addCommandes" />
+  <xs:element name="addCommandesResponse" type="tns:addCommandesResponse" />
+  <xs:element name="addLivraisonAdresse" type="tns:addLivraisonAdresse" />
+  <xs:element name="addLivraisonAdresseResponse" type="tns:addLivraisonAdresseResponse" />
+  <xs:element name="addSouscat" type="tns:addSouscat" />
+  <xs:element name="addSouscatResponse" type="tns:addSouscatResponse" />
+  <xs:element name="categories" type="tns:categories" />
+  <xs:element name="commandes" type="tns:commandes" />
+  <xs:element name="commandesValider" type="tns:commandesValider" />
+  <xs:element name="commandesValiderResponse" type="tns:commandesValiderResponse" />
+  <xs:element name="countCommandes" type="tns:countCommandes" />
+  <xs:element name="countCommandesResponse" type="tns:countCommandesResponse" />
+  <xs:element name="countJCommandes" type="tns:countJCommandes" />
+  <xs:element name="countJCommandesResponse" type="tns:countJCommandesResponse" />
+  <xs:element name="deleteAdresses" type="tns:deleteAdresses" />
+  <xs:element name="deleteAdressesResponse" type="tns:deleteAdressesResponse" />
+  <xs:element name="deleteCategories" type="tns:deleteCategories" />
+  <xs:element name="deleteCommandes" type="tns:deleteCommandes" />
+  <xs:element name="deleteCommandesResponse" type="tns:deleteCommandesResponse" />
+  <xs:element name="deleteMedia" type="tns:deleteMedia" />
+  <xs:element name="deleteMediaResponse" type="tns:deleteMediaResponse" />
+  <xs:element name="deleteSouscat" type="tns:deleteSouscat" />
+  <xs:element name="deleteSouscatResponse" type="tns:deleteSouscatResponse" />
+  <xs:element name="editCommandes" type="tns:editCommandes" />
+  <xs:element name="editCommandesResponse" type="tns:editCommandesResponse" />
+  <xs:element name="editMedia" type="tns:editMedia" />
+  <xs:element name="editMediaResponse" type="tns:editMediaResponse" />
+  <xs:element name="editProduits" type="tns:editProduits" />
+  <xs:element name="editProduitsResponse" type="tns:editProduitsResponse" />
+  <xs:element name="editSouscat" type="tns:editSouscat" />
+  <xs:element name="editSouscatResponse" type="tns:editSouscatResponse" />
+  <xs:element name="edtiCategories" type="tns:edtiCategories" />
+  <xs:element name="findCategories" type="tns:findCategories" />
+  <xs:element name="findCategoriesResponse" type="tns:findCategoriesResponse" />
+  <xs:element name="findCommands" type="tns:findCommands" />
+  <xs:element name="findCommandsResponse" type="tns:findCommandsResponse" />
+  <xs:element name="findSouscat" type="tns:findSouscat" />
+  <xs:element name="findSouscatResponse" type="tns:findSouscatResponse" />
+  <xs:element name="getAllCategories" type="tns:getAllCategories" />
+  <xs:element name="getAllCategoriesAdmin" type="tns:getAllCategoriesAdmin" />
+  <xs:element name="getAllCategoriesAdminResponse" type="tns:getAllCategoriesAdminResponse" />
+  <xs:element name="getAllCategoriesResponse" type="tns:getAllCategoriesResponse" />
+  <xs:element name="getAllCommandes" type="tns:getAllCommandes" />
+  <xs:element name="getAllCommandesResponse" type="tns:getAllCommandesResponse" />
+  <xs:element name="getAllMedia" type="tns:getAllMedia" />
+  <xs:element name="getAllMediaResponse" type="tns:getAllMediaResponse" />
+  <xs:element name="getAllPages" type="tns:getAllPages" />
+  <xs:element name="getAllPagesResponse" type="tns:getAllPagesResponse" />
+  <xs:element name="getAllProduits" type="tns:getAllProduits" />
+  <xs:element name="getAllProduitsResponse" type="tns:getAllProduitsResponse" />
+  <xs:element name="getAllProduits_" type="tns:getAllProduits_" />
+  <xs:element name="getAllProduits_Response" type="tns:getAllProduits_Response" />
+  <xs:element name="getAllTva" type="tns:getAllTva" />
+  <xs:element name="getAllTvaResponse" type="tns:getAllTvaResponse" />
+  <xs:element name="getAllUtilisateurs" type="tns:getAllUtilisateurs" />
+  <xs:element name="getAllUtilisateursResponse" type="tns:getAllUtilisateursResponse" />
+  <xs:element name="getAllUtilisateursadresses" type="tns:getAllUtilisateursadresses" />
+  <xs:element name="getAllUtilisateursadressesResponse" type="tns:getAllUtilisateursadressesResponse" />
+  <xs:element name="getNameUserAdresses" type="tns:getNameUserAdresses" />
+  <xs:element name="getNameUserAdressesResponse" type="tns:getNameUserAdressesResponse" />
+  <xs:element name="media" type="tns:media" />
+  <xs:element name="pages" type="tns:pages" />
+  <xs:element name="produit" type="tns:produit" />
+  <xs:element name="searchMedia" type="tns:searchMedia" />
+  <xs:element name="searchMediaResponse" type="tns:searchMediaResponse" />
+  <xs:element name="sousCategories" type="tns:sousCategories" />
+  <xs:element name="tva" type="tns:tva" />
+  <xs:element name="utilisateurs" type="tns:utilisateurs" />
+  <xs:element name="utilisateursadresses" type="tns:utilisateursadresses" />
+  <xs:element name="verificationUser" type="tns:verificationUser" />
+  <xs:element name="verificationUserResponse" type="tns:verificationUserResponse" />
+  <xs:complexType name="edtiCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="idimage" type="xs:string" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComparaisonProduits">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="idcategorie" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ComparaisonProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="produit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categorieId" type="tns:sousCategories" />
+      <xs:element minOccurs="0" name="description" type="xs:string" />
+      <xs:element name="disponible" type="xs:short" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="imageId" type="tns:media" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="prix" type="xs:double" />
+      <xs:element minOccurs="0" name="tvaId" type="tns:tva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sousCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="categoriesId" type="tns:categories" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="categories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="imageId" type="tns:media" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="media">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="alt" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="path" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tva">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element name="multiplicate" type="xs:double" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element name="valeur" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllCommandes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllCommandesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:commandes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="commandes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="commandes" type="xs:string" />
+      <xs:element minOccurs="0" name="dateCommandes" type="xs:string" />
+      <xs:element minOccurs="0" name="heure" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element name="reference" type="xs:int" />
+      <xs:element minOccurs="0" name="timesCommandes" type="xs:string" />
+      <xs:element minOccurs="0" name="utilisateurId" type="tns:utilisateurs" />
+      <xs:element name="valider" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="utilisateurs">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="confirmationToken" type="xs:string" />
+      <xs:element minOccurs="0" name="credentialsExpireAt" type="xs:dateTime" />
+      <xs:element name="credentialsExpired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="email" type="xs:string" />
+      <xs:element minOccurs="0" name="emailCanonical" type="xs:string" />
+      <xs:element name="enabled" type="xs:boolean" />
+      <xs:element name="expired" type="xs:boolean" />
+      <xs:element minOccurs="0" name="expiresAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="lastLogin" type="xs:dateTime" />
+      <xs:element name="locked" type="xs:boolean" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+      <xs:element minOccurs="0" name="passwordRequestedAt" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="roles" type="xs:string" />
+      <xs:element minOccurs="0" name="salt" type="xs:string" />
+      <xs:element minOccurs="0" name="username" type="xs:string" />
+      <xs:element minOccurs="0" name="usernameCanonical" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificationUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="verificationUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateurs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteSouscat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteSouscatResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllTva">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllTvaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:tva" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSouscat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="cat" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addSouscatResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addCommandes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="valid" type="xs:boolean" />
+      <xs:element name="reference" type="xs:int" />
+      <xs:element minOccurs="0" name="commandes" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addCommandesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdressesFacturations">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdressesFacturationsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="utilisateursadresses">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adresse" type="xs:string" />
+      <xs:element minOccurs="0" name="complement" type="xs:string" />
+      <xs:element minOccurs="0" name="cp" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="pays" type="xs:string" />
+      <xs:element minOccurs="0" name="prenom" type="xs:string" />
+      <xs:element minOccurs="0" name="telephone" type="xs:string" />
+      <xs:element minOccurs="0" name="utilisateurId" type="tns:utilisateurs" />
+      <xs:element minOccurs="0" name="ville" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editCommandes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="valid" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editCommandesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNameUserAdresses">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getNameUserAdressesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCommandesDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCommandesDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:commandes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findSouscat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findSouscatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:sousCategories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllPages">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllPagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:pages" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="pages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="contenu" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="titre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchProduits">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addLivraisonAdresse">
+    <xs:sequence>
+      <xs:element name="user" type="xs:int" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="prenom" type="xs:string" />
+      <xs:element minOccurs="0" name="phone" type="xs:string" />
+      <xs:element minOccurs="0" name="adresse" type="xs:string" />
+      <xs:element minOccurs="0" name="cp" type="xs:string" />
+      <xs:element minOccurs="0" name="pays" type="xs:string" />
+      <xs:element minOccurs="0" name="ville" type="xs:string" />
+      <xs:element minOccurs="0" name="complement" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="addLivraisonAdresseResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllProduits">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllProduitsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="path" type="xs:string" />
+      <xs:element minOccurs="0" name="alt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editMediaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllMedia">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllMediaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:media" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUtilisateursadresses">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllUtilisateursadressesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCategoriesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:categories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCommands">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="findCommandsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:commandes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ListSousCat">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="ListSousCatResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sousCategories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editProduits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="image" type="xs:string" />
+      <xs:element minOccurs="0" name="tva" type="xs:string" />
+      <xs:element minOccurs="0" name="cat" type="xs:string" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="desc" type="xs:string" />
+      <xs:element minOccurs="0" name="prix" type="xs:string" />
+      <xs:element minOccurs="0" name="disp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editProduitsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllUtilisateurs">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllUtilisateursResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:utilisateurs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCommandes">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCommandesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="commandesValider">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="commandesValiderResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:commandes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAdresses">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteAdressesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperationCommandes">
+    <xs:sequence>
+      <xs:element name="user" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="RecuperationCommandesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:commandes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddProduits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="image" type="xs:string" />
+      <xs:element minOccurs="0" name="tva" type="xs:string" />
+      <xs:element minOccurs="0" name="cat" type="xs:string" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="desc" type="xs:string" />
+      <xs:element minOccurs="0" name="prix" type="xs:string" />
+      <xs:element minOccurs="0" name="disp" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddProduitsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdminVerify">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="login" type="xs:string" />
+      <xs:element minOccurs="0" name="password" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdminVerifyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateurs" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchAdresseLivraison">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchAdresseLivraisonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countJCommandes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countJCommandesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresseLivraisons">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresseLivraisonsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FindProduit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="FindProduitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresseLivraison">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AdresseLivraisonResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:utilisateursadresses" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllProduits_">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllProduits_Response">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editSouscat">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+      <xs:element minOccurs="0" name="nom" type="xs:string" />
+      <xs:element minOccurs="0" name="cat" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="editSouscatResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllCategoriesAdmin">
+    <xs:sequence>
+      <xs:element name="debut" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllCategoriesAdminResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCategoriesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="deleteMediaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SousCategoriesArray">
+    <xs:sequence>
+      <xs:element name="array" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SousCategoriesArrayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:sousCategories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getAllCategories">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="getAllCategoriesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:categories" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddCategories">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="image" type="xs:string" />
+      <xs:element minOccurs="0" name="arg1" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddCategoriesResponse">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="DeleteProduits">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteProduitsResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="searchMediaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:media" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProduitsArray">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="array" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ProduitsArrayResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:produit" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DeleteCategoriesResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="countCommandes">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="countCommandesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddMedia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="path" type="xs:string" />
+      <xs:element minOccurs="0" name="alt" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AddMediaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

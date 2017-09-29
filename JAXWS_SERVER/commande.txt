@@ -1,0 +1,2 @@
+
+D:\M1\JAXWS_SERVER\build\classes>wsgen -cp . -d ../ ws.JAXWSServices

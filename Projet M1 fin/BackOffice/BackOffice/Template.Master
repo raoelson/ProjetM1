@@ -1,0 +1,193 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="BackOffice.Template" %>
+
+<!DOCTYPE html>
+<html lang="fr">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title runat="server"><%: Page.Title %> - Shop Admin</title>
+    
+    <script>
+        var active = "<%: Page.Title %>";
+    </script>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" /> 
+    <link href="~/Content/css/bootstrap-responsive.min.css" rel="stylesheet" /> 
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" /> 
+    <link href="~/Content/css/base-admin.css" rel="stylesheet" /> 
+    <link href="~/Content/css/base-admin-responsive.css" rel="stylesheet" /> 
+    <link href="~/Content/css/pages/dashboard.css" rel="stylesheet" /> 
+    <link href="~/Content/css/bootstrap-toggle-buttons.css" rel="stylesheet" /> 
+    <link href="~/Scripts/lib/ui/css/jquery-ui-1.10.0.custom.css" rel="stylesheet" /> 
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="<%: ResolveUrl("~/Scripts/jquery-1.7.2.min.js") %>"></script>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+    <asp:PlaceHolder runat="server">        
+        
+            <script src="<%: ResolveUrl("~/Scripts/jquery.toggle.buttons.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/lib/jquery.tablesorter.min.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/lib/localscroll/jquery.localscroll.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/lib/localscroll/jquery.scrollTo.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/bootstrap.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/lib/ui/js/jquery-ui-1.10.0.custom.min.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/lib/ui/js/jquery.ui.datepicker-fr.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/sites/init.js") %>"></script>
+            <script src="<%: ResolveUrl("~/Scripts/base.js") %>"></script>  
+            <script src="<%: ResolveUrl("~/Scripts/jquery.ui.datepicker-fr.js") %>"></script>             
+    </asp:PlaceHolder>
+</head>
+<body>
+    
+   
+    <div class="navbar navbar-fixed-top">
+
+        <div class="navbar-inner">
+
+        <div class="container"><a class="btn btn-navbar" data-toggle="collapse"
+	        data-target=".nav-collapse"> <span class="icon-bar"></span> <span
+	        class="icon-bar"></span> <span class="icon-bar"></span> </a> 
+        <a class="brand" href="#" target="_blank">
+        Shop Admin </a>
+
+        <div class="nav-collapse">
+        <ul class="nav pull-right">        
+	        <li class="dropdown"><a href="#" class="dropdown-toggle"
+		        data-toggle="dropdown"> <i class="icon-cog"></i> Options <b
+		        class="caret"></b> </a>
+
+	        <ul class="dropdown-menu">
+		        <li><a href="#">Routage</a></li>
+		        <li class="divider"></li>
+		        <li><a href="javascript:;">Aide</a></li>
+	        </ul>
+
+	        </li>
+	        <?php endif ?>
+	        <li class="dropdown"><a href="#" class="dropdown-toggle"
+		        data-toggle="dropdown"> <i class="icon-user"></i><%: Session["user"] %>
+	        <b class="caret"></b> </a>
+	        <ul class="dropdown-menu">
+		        <li><a href="#">Mon
+		        Profil</a></li>
+		        <li class="divider"></li>
+		        <li><a href="#" onclick="logout()">Se
+		        déconnecter</a></li>
+	        </ul>
+
+	        </li>
+        </ul>	        
+        <div class="modal hide fade" id="search-dialog" style="width: 80%;left: 10%;top: 10%;z-index: 1050;overflow: auto;margin:0">
+        <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+	        aria-hidden="true">&times;</button>
+        <h3><span id="title_search" style="font-size: 20px;"></span></h3>
+        </div>
+        <div class="modal-body">
+        <div class="widget-header"><i class="icon-th-list"></i>
+        <h3 id="title_table_search"></h3>
+        </div>
+        <table class="table table-striped table-bordered" id="table-search">
+	        <thead>
+	        </thead>
+	        <tbody>
+	        </tbody>	
+        </table>
+        </div>
+        <div class="modal-footer"><a href="#" class="btn" data-dismiss="modal"
+	        aria-hidden="true">Fermer</a></div>
+        </div>
+
+
+        </div>
+        <!--/.nav-collapse --></div>
+        <!-- /container --></div>
+        <!-- /navbar-inner --></div>
+        <!-- /navbar -->
+        <div class="subnavbar">
+            <div class="subnavbar-inner">
+  <div class="container">
+    <ul class="mainnav">
+      <li id="menu_home" > <a href="/Dashboard.aspx"> <i class="icon-home"></i> <span>Accueil</span> </a> </li>
+      <li class="dropdown" id="menu_article"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list-alt"></i><span>Gestions des ventes</span> <b class="caret"></b></a>
+       <ul class="dropdown-menu">
+       		<li><a href="/Categories.aspx">Catégories</a></li> 
+           <li><a href="/SousCat.aspx">Sous Catégories</a></li>       		
+       		<li class="divider"></li>       		
+       		<li><a href="/Produits.aspx">Produits </a></li>       		     		
+       		<li class="divider"></li>
+       		<li><a href="/Media.aspx">Medias</a></li> 
+           <li class="divider"></li>
+       		<li><a href="<?php echo base_url()?>admin.php/actualite/">Tva</a></li>       		
+       </ul>
+      </li>      
+      <li class="dropdown" id="menu_user"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-user"></i><span>Gestions des utilisateurs</span> <b class="caret"></b></a>
+       <ul class="dropdown-menu">
+       		<li><a href="#">Groupes &amp; Keywords</a></li>
+       		<li class="divider"></li>
+       		<li><a href="#">Tous les utilisateurs</a></li>	
+       		<li><a href="#">Inscriptions &agrave; confirmer</a></li>
+       		<li class="divider"></li>
+       		<li><a href="#">Tous les abonnés</a></li>
+       </ul>
+      </li>
+      <li class="dropdown" id="menu_commandes"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-th-large"></i><span>Gestions des commandes</span> <b class="caret"></b></a>
+       <ul class="dropdown-menu">
+       		<li><a href="/Commandes.aspx">Commandes</a></li>
+       		<li><a href="#">Factures</a></li>       		
+       		 
+       </ul>
+      </li>              
+    </ul>
+  </div>
+  <!-- /container --> 
+</div>
+<!-- /subnavbar-inner -->
+        </div>
+    <div class="main" id="body">
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+    </div>
+  <div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span12"> &copy; <%: DateTime.Now.Year %>  <a href="/" target="_blank">http://www.shop_by_Dani.mg</a>. </div>
+        <!-- /span12 --> 
+        
+      </div>
+      <!-- /row --> 
+      
+    </div>
+    <!-- /container --> 
+    
+  </div>
+  <!-- /footer-inner --> 
+</div>
+<!-- /footer -->
+  <script>
+      logout = function () {
+          $.ajax({
+              url: "Default.aspx/logout",
+              type: "POST",
+              data: '{}',
+              contentType: "application/json; charset=utf-8",
+              dataType: "json",
+              success: function (result) {
+                  if (result.d != 0) {
+                      window.location.assign("/Default.aspx");
+                  }
+              },
+              error: function (err) {
+                  alert(err.statusText + "ok")
+              }
+          });
+      }
+  </script>      
+   
+</body>
+</html>

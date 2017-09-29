@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:tns="http://Services.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="CommandesWs" targetNamespace="http://Services.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://djazzjah:8080/BackEndWs/CommandesWs?xsd=1" namespace="http://Services.com/" />
+    </xsd:schema>
+  </types>
+  <message name="getAllUtilisateursadresses">
+    <part name="parameters" element="tns:getAllUtilisateursadresses" />
+  </message>
+  <message name="getAllUtilisateursadressesResponse">
+    <part name="parameters" element="tns:getAllUtilisateursadressesResponse" />
+  </message>
+  <message name="SearchCommandesDetails">
+    <part name="parameters" element="tns:SearchCommandesDetails" />
+  </message>
+  <message name="SearchCommandesDetailsResponse">
+    <part name="parameters" element="tns:SearchCommandesDetailsResponse" />
+  </message>
+  <message name="getAllCategoriesAdmin">
+    <part name="parameters" element="tns:getAllCategoriesAdmin" />
+  </message>
+  <message name="getAllCategoriesAdminResponse">
+    <part name="parameters" element="tns:getAllCategoriesAdminResponse" />
+  </message>
+  <message name="RecuperationCommandes">
+    <part name="parameters" element="tns:RecuperationCommandes" />
+  </message>
+  <message name="RecuperationCommandesResponse">
+    <part name="parameters" element="tns:RecuperationCommandesResponse" />
+  </message>
+  <message name="SearchAdresseLivraison">
+    <part name="parameters" element="tns:SearchAdresseLivraison" />
+  </message>
+  <message name="SearchAdresseLivraisonResponse">
+    <part name="parameters" element="tns:SearchAdresseLivraisonResponse" />
+  </message>
+  <message name="getAllPages">
+    <part name="parameters" element="tns:getAllPages" />
+  </message>
+  <message name="getAllPagesResponse">
+    <part name="parameters" element="tns:getAllPagesResponse" />
+  </message>
+  <message name="ListSousCat">
+    <part name="parameters" element="tns:ListSousCat" />
+  </message>
+  <message name="ListSousCatResponse">
+    <part name="parameters" element="tns:ListSousCatResponse" />
+  </message>
+  <message name="editSouscat">
+    <part name="parameters" element="tns:editSouscat" />
+  </message>
+  <message name="editSouscatResponse">
+    <part name="parameters" element="tns:editSouscatResponse" />
+  </message>
+  <message name="getAllTva">
+    <part name="parameters" element="tns:getAllTva" />
+  </message>
+  <message name="getAllTvaResponse">
+    <part name="parameters" element="tns:getAllTvaResponse" />
+  </message>
+  <message name="getAllMedia">
+    <part name="parameters" element="tns:getAllMedia" />
+  </message>
+  <message name="getAllMediaResponse">
+    <part name="parameters" element="tns:getAllMediaResponse" />
+  </message>
+  <message name="AddMedia">
+    <part name="parameters" element="tns:AddMedia" />
+  </message>
+  <message name="AddMediaResponse">
+    <part name="parameters" element="tns:AddMediaResponse" />
+  </message>
+  <message name="addSouscat">
+    <part name="parameters" element="tns:addSouscat" />
+  </message>
+  <message name="addSouscatResponse">
+    <part name="parameters" element="tns:addSouscatResponse" />
+  </message>
+  <message name="findSouscat">
+    <part name="parameters" element="tns:findSouscat" />
+  </message>
+  <message name="findSouscatResponse">
+    <part name="parameters" element="tns:findSouscatResponse" />
+  </message>
+  <message name="addCommandes">
+    <part name="parameters" element="tns:addCommandes" />
+  </message>
+  <message name="addCommandesResponse">
+    <part name="parameters" element="tns:addCommandesResponse" />
+  </message>
+  <message name="searchMedia">
+    <part name="parameters" element="tns:searchMedia" />
+  </message>
+  <message name="searchMediaResponse">
+    <part name="parameters" element="tns:searchMediaResponse" />
+  </message>
+  <message name="editMedia">
+    <part name="parameters" element="tns:editMedia" />
+  </message>
+  <message name="editMediaResponse">
+    <part name="parameters" element="tns:editMediaResponse" />
+  </message>
+  <message name="editProduits">
+    <part name="parameters" element="tns:editProduits" />
+  </message>
+  <message name="editProduitsResponse">
+    <part name="parameters" element="tns:editProduitsResponse" />
+  </message>
+  <message name="FindProduit">
+    <part name="parameters" element="tns:FindProduit" />
+  </message>
+  <message name="FindProduitResponse">
+    <part name="parameters" element="tns:FindProduitResponse" />
+  </message>
+  <message name="AdminVerify">
+    <part name="parameters" element="tns:AdminVerify" />
+  </message>
+  <message name="AdminVerifyResponse">
+    <part name="parameters" element="tns:AdminVerifyResponse" />
+  </message>
+  <message name="AddProduits">
+    <part name="parameters" element="tns:AddProduits" />
+  </message>
+  <message name="AddProduitsResponse">
+    <part name="parameters" element="tns:AddProduitsResponse" />
+  </message>
+  <message name="deleteMedia">
+    <part name="parameters" element="tns:deleteMedia" />
+  </message>
+  <message name="deleteMediaResponse">
+    <part name="parameters" element="tns:deleteMediaResponse" />
+  </message>
+  <message name="findCommands">
+    <part name="parameters" element="tns:findCommands" />
+  </message>
+  <message name="findCommandsResponse">
+    <part name="parameters" element="tns:findCommandsResponse" />
+  </message>
+  <message name="ComparaisonProduits">
+    <part name="parameters" element="tns:ComparaisonProduits" />
+  </message>
+  <message name="ComparaisonProduitsResponse">
+    <part name="parameters" element="tns:ComparaisonProduitsResponse" />
+  </message>
+  <message name="getAllUtilisateurs">
+    <part name="parameters" element="tns:getAllUtilisateurs" />
+  </message>
+  <message name="getAllUtilisateursResponse">
+    <part name="parameters" element="tns:getAllUtilisateursResponse" />
+  </message>
+  <message name="AdresseLivraison">
+    <part name="parameters" element="tns:AdresseLivraison" />
+  </message>
+  <message name="AdresseLivraisonResponse">
+    <part name="parameters" element="tns:AdresseLivraisonResponse" />
+  </message>
+  <message name="SearchCategories">
+    <part name="parameters" element="tns:SearchCategories" />
+  </message>
+  <message name="SearchCategoriesResponse">
+    <part name="parameters" element="tns:SearchCategoriesResponse" />
+  </message>
+  <message name="getAllProduits">
+    <part name="parameters" element="tns:getAllProduits" />
+  </message>
+  <message name="getAllProduitsResponse">
+    <part name="parameters" element="tns:getAllProduitsResponse" />
+  </message>
+  <message name="getAllCommandes">
+    <part name="parameters" element="tns:getAllCommandes" />
+  </message>
+  <message name="getAllCommandesResponse">
+    <part name="parameters" element="tns:getAllCommandesResponse" />
+  </message>
+  <message name="SearchProduits">
+    <part name="parameters" element="tns:SearchProduits" />
+  </message>
+  <message name="SearchProduitsResponse">
+    <part name="parameters" element="tns:SearchProduitsResponse" />
+  </message>
+  <message name="ProduitsArray">
+    <part name="parameters" element="tns:ProduitsArray" />
+  </message>
+  <message name="ProduitsArrayResponse">
+    <part name="parameters" element="tns:ProduitsArrayResponse" />
+  </message>
+  <message name="verificationUser">
+    <part name="parameters" element="tns:verificationUser" />
+  </message>
+  <message name="verificationUserResponse">
+    <part name="parameters" element="tns:verificationUserResponse" />
+  </message>
+  <message name="getAllCategories">
+    <part name="parameters" element="tns:getAllCategories" />
+  </message>
+  <message name="getAllCategoriesResponse">
+    <part name="parameters" element="tns:getAllCategoriesResponse" />
+  </message>
+  <message name="deleteCommandes">
+    <part name="parameters" element="tns:deleteCommandes" />
+  </message>
+  <message name="deleteCommandesResponse">
+    <part name="parameters" element="tns:deleteCommandesResponse" />
+  </message>
+  <message name="findCategories">
+    <part name="parameters" element="tns:findCategories" />
+  </message>
+  <message name="findCategoriesResponse">
+    <part name="parameters" element="tns:findCategoriesResponse" />
+  </message>
+  <message name="AdressesFacturations">
+    <part name="parameters" element="tns:AdressesFacturations" />
+  </message>
+  <message name="AdressesFacturationsResponse">
+    <part name="parameters" element="tns:AdressesFacturationsResponse" />
+  </message>
+  <message name="AddCategories">
+    <part name="parameters" element="tns:AddCategories" />
+  </message>
+  <message name="AddCategoriesResponse">
+    <part name="parameters" element="tns:AddCategoriesResponse" />
+  </message>
+  <message name="getNameUserAdresses">
+    <part name="parameters" element="tns:getNameUserAdresses" />
+  </message>
+  <message name="getNameUserAdressesResponse">
+    <part name="parameters" element="tns:getNameUserAdressesResponse" />
+  </message>
+  <message name="deleteCategories">
+    <part name="parameters" element="tns:deleteCategories" />
+  </message>
+  <message name="edtiCategories">
+    <part name="parameters" element="tns:edtiCategories" />
+  </message>
+  <message name="commandesValider">
+    <part name="parameters" element="tns:commandesValider" />
+  </message>
+  <message name="commandesValiderResponse">
+    <part name="parameters" element="tns:commandesValiderResponse" />
+  </message>
+  <message name="addLivraisonAdresse">
+    <part name="parameters" element="tns:addLivraisonAdresse" />
+  </message>
+  <message name="addLivraisonAdresseResponse">
+    <part name="parameters" element="tns:addLivraisonAdresseResponse" />
+  </message>
+  <message name="deleteAdresses">
+    <part name="parameters" element="tns:deleteAdresses" />
+  </message>
+  <message name="deleteAdressesResponse">
+    <part name="parameters" element="tns:deleteAdressesResponse" />
+  </message>
+  <message name="DeleteCategories">
+    <part name="parameters" element="tns:DeleteCategories" />
+  </message>
+  <message name="DeleteCategoriesResponse">
+    <part name="parameters" element="tns:DeleteCategoriesResponse" />
+  </message>
+  <message name="deleteSouscat">
+    <part name="parameters" element="tns:deleteSouscat" />
+  </message>
+  <message name="deleteSouscatResponse">
+    <part name="parameters" element="tns:deleteSouscatResponse" />
+  </message>
+  <message name="getAllProduits_">
+    <part name="parameters" element="tns:getAllProduits_" />
+  </message>
+  <message name="getAllProduits_Response">
+    <part name="parameters" element="tns:getAllProduits_Response" />
+  </message>
+  <message name="editCommandes">
+    <part name="parameters" element="tns:editCommandes" />
+  </message>
+  <message name="editCommandesResponse">
+    <part name="parameters" element="tns:editCommandesResponse" />
+  </message>
+  <message name="DeleteProduits">
+    <part name="parameters" element="tns:DeleteProduits" />
+  </message>
+  <message name="DeleteProduitsResponse">
+    <part name="parameters" element="tns:DeleteProduitsResponse" />
+  </message>
+  <message name="countCommandes">
+    <part name="parameters" element="tns:countCommandes" />
+  </message>
+  <message name="countCommandesResponse">
+    <part name="parameters" element="tns:countCommandesResponse" />
+  </message>
+  <message name="AdresseLivraisons">
+    <part name="parameters" element="tns:AdresseLivraisons" />
+  </message>
+  <message name="AdresseLivraisonsResponse">
+    <part name="parameters" element="tns:AdresseLivraisonsResponse" />
+  </message>
+  <message name="countJCommandes">
+    <part name="parameters" element="tns:countJCommandes" />
+  </message>
+  <message name="countJCommandesResponse">
+    <part name="parameters" element="tns:countJCommandesResponse" />
+  </message>
+  <message name="SousCategoriesArray">
+    <part name="parameters" element="tns:SousCategoriesArray" />
+  </message>
+  <message name="SousCategoriesArrayResponse">
+    <part name="parameters" element="tns:SousCategoriesArrayResponse" />
+  </message>
+  <portType name="CommandesWs">
+    <operation name="getAllUtilisateursadresses">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllUtilisateursadressesRequest" message="tns:getAllUtilisateursadresses" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllUtilisateursadressesResponse" message="tns:getAllUtilisateursadressesResponse" />
+    </operation>
+    <operation name="SearchCommandesDetails">
+      <input wsam:Action="http://Services.com/CommandesWs/SearchCommandesDetailsRequest" message="tns:SearchCommandesDetails" />
+      <output wsam:Action="http://Services.com/CommandesWs/SearchCommandesDetailsResponse" message="tns:SearchCommandesDetailsResponse" />
+    </operation>
+    <operation name="getAllCategoriesAdmin">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllCategoriesAdminRequest" message="tns:getAllCategoriesAdmin" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllCategoriesAdminResponse" message="tns:getAllCategoriesAdminResponse" />
+    </operation>
+    <operation name="RecuperationCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/RecuperationCommandesRequest" message="tns:RecuperationCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/RecuperationCommandesResponse" message="tns:RecuperationCommandesResponse" />
+    </operation>
+    <operation name="SearchAdresseLivraison">
+      <input wsam:Action="http://Services.com/CommandesWs/SearchAdresseLivraisonRequest" message="tns:SearchAdresseLivraison" />
+      <output wsam:Action="http://Services.com/CommandesWs/SearchAdresseLivraisonResponse" message="tns:SearchAdresseLivraisonResponse" />
+    </operation>
+    <operation name="getAllPages">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllPagesRequest" message="tns:getAllPages" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllPagesResponse" message="tns:getAllPagesResponse" />
+    </operation>
+    <operation name="ListSousCat">
+      <input wsam:Action="http://Services.com/CommandesWs/ListSousCatRequest" message="tns:ListSousCat" />
+      <output wsam:Action="http://Services.com/CommandesWs/ListSousCatResponse" message="tns:ListSousCatResponse" />
+    </operation>
+    <operation name="editSouscat">
+      <input wsam:Action="http://Services.com/CommandesWs/editSouscatRequest" message="tns:editSouscat" />
+      <output wsam:Action="http://Services.com/CommandesWs/editSouscatResponse" message="tns:editSouscatResponse" />
+    </operation>
+    <operation name="getAllTva">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllTvaRequest" message="tns:getAllTva" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllTvaResponse" message="tns:getAllTvaResponse" />
+    </operation>
+    <operation name="getAllMedia">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllMediaRequest" message="tns:getAllMedia" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllMediaResponse" message="tns:getAllMediaResponse" />
+    </operation>
+    <operation name="AddMedia">
+      <input wsam:Action="http://Services.com/CommandesWs/AddMediaRequest" message="tns:AddMedia" />
+      <output wsam:Action="http://Services.com/CommandesWs/AddMediaResponse" message="tns:AddMediaResponse" />
+    </operation>
+    <operation name="addSouscat">
+      <input wsam:Action="http://Services.com/CommandesWs/addSouscatRequest" message="tns:addSouscat" />
+      <output wsam:Action="http://Services.com/CommandesWs/addSouscatResponse" message="tns:addSouscatResponse" />
+    </operation>
+    <operation name="findSouscat">
+      <input wsam:Action="http://Services.com/CommandesWs/findSouscatRequest" message="tns:findSouscat" />
+      <output wsam:Action="http://Services.com/CommandesWs/findSouscatResponse" message="tns:findSouscatResponse" />
+    </operation>
+    <operation name="addCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/addCommandesRequest" message="tns:addCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/addCommandesResponse" message="tns:addCommandesResponse" />
+    </operation>
+    <operation name="searchMedia">
+      <input wsam:Action="http://Services.com/CommandesWs/searchMediaRequest" message="tns:searchMedia" />
+      <output wsam:Action="http://Services.com/CommandesWs/searchMediaResponse" message="tns:searchMediaResponse" />
+    </operation>
+    <operation name="editMedia">
+      <input wsam:Action="http://Services.com/CommandesWs/editMediaRequest" message="tns:editMedia" />
+      <output wsam:Action="http://Services.com/CommandesWs/editMediaResponse" message="tns:editMediaResponse" />
+    </operation>
+    <operation name="editProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/editProduitsRequest" message="tns:editProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/editProduitsResponse" message="tns:editProduitsResponse" />
+    </operation>
+    <operation name="FindProduit">
+      <input wsam:Action="http://Services.com/CommandesWs/FindProduitRequest" message="tns:FindProduit" />
+      <output wsam:Action="http://Services.com/CommandesWs/FindProduitResponse" message="tns:FindProduitResponse" />
+    </operation>
+    <operation name="AdminVerify">
+      <input wsam:Action="http://Services.com/CommandesWs/AdminVerifyRequest" message="tns:AdminVerify" />
+      <output wsam:Action="http://Services.com/CommandesWs/AdminVerifyResponse" message="tns:AdminVerifyResponse" />
+    </operation>
+    <operation name="AddProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/AddProduitsRequest" message="tns:AddProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/AddProduitsResponse" message="tns:AddProduitsResponse" />
+    </operation>
+    <operation name="deleteMedia">
+      <input wsam:Action="http://Services.com/CommandesWs/deleteMediaRequest" message="tns:deleteMedia" />
+      <output wsam:Action="http://Services.com/CommandesWs/deleteMediaResponse" message="tns:deleteMediaResponse" />
+    </operation>
+    <operation name="findCommands">
+      <input wsam:Action="http://Services.com/CommandesWs/findCommandsRequest" message="tns:findCommands" />
+      <output wsam:Action="http://Services.com/CommandesWs/findCommandsResponse" message="tns:findCommandsResponse" />
+    </operation>
+    <operation name="ComparaisonProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/ComparaisonProduitsRequest" message="tns:ComparaisonProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/ComparaisonProduitsResponse" message="tns:ComparaisonProduitsResponse" />
+    </operation>
+    <operation name="getAllUtilisateurs">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllUtilisateursRequest" message="tns:getAllUtilisateurs" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllUtilisateursResponse" message="tns:getAllUtilisateursResponse" />
+    </operation>
+    <operation name="AdresseLivraison">
+      <input wsam:Action="http://Services.com/CommandesWs/AdresseLivraisonRequest" message="tns:AdresseLivraison" />
+      <output wsam:Action="http://Services.com/CommandesWs/AdresseLivraisonResponse" message="tns:AdresseLivraisonResponse" />
+    </operation>
+    <operation name="SearchCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/SearchCategoriesRequest" message="tns:SearchCategories" />
+      <output wsam:Action="http://Services.com/CommandesWs/SearchCategoriesResponse" message="tns:SearchCategoriesResponse" />
+    </operation>
+    <operation name="getAllProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllProduitsRequest" message="tns:getAllProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllProduitsResponse" message="tns:getAllProduitsResponse" />
+    </operation>
+    <operation name="getAllCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllCommandesRequest" message="tns:getAllCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllCommandesResponse" message="tns:getAllCommandesResponse" />
+    </operation>
+    <operation name="SearchProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/SearchProduitsRequest" message="tns:SearchProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/SearchProduitsResponse" message="tns:SearchProduitsResponse" />
+    </operation>
+    <operation name="ProduitsArray">
+      <input wsam:Action="http://Services.com/CommandesWs/ProduitsArrayRequest" message="tns:ProduitsArray" />
+      <output wsam:Action="http://Services.com/CommandesWs/ProduitsArrayResponse" message="tns:ProduitsArrayResponse" />
+    </operation>
+    <operation name="verificationUser">
+      <input wsam:Action="http://Services.com/CommandesWs/verificationUserRequest" message="tns:verificationUser" />
+      <output wsam:Action="http://Services.com/CommandesWs/verificationUserResponse" message="tns:verificationUserResponse" />
+    </operation>
+    <operation name="getAllCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllCategoriesRequest" message="tns:getAllCategories" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllCategoriesResponse" message="tns:getAllCategoriesResponse" />
+    </operation>
+    <operation name="deleteCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/deleteCommandesRequest" message="tns:deleteCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/deleteCommandesResponse" message="tns:deleteCommandesResponse" />
+    </operation>
+    <operation name="findCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/findCategoriesRequest" message="tns:findCategories" />
+      <output wsam:Action="http://Services.com/CommandesWs/findCategoriesResponse" message="tns:findCategoriesResponse" />
+    </operation>
+    <operation name="AdressesFacturations">
+      <input wsam:Action="http://Services.com/CommandesWs/AdressesFacturationsRequest" message="tns:AdressesFacturations" />
+      <output wsam:Action="http://Services.com/CommandesWs/AdressesFacturationsResponse" message="tns:AdressesFacturationsResponse" />
+    </operation>
+    <operation name="AddCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/AddCategoriesRequest" message="tns:AddCategories" />
+      <output wsam:Action="http://Services.com/CommandesWs/AddCategoriesResponse" message="tns:AddCategoriesResponse" />
+    </operation>
+    <operation name="getNameUserAdresses">
+      <input wsam:Action="http://Services.com/CommandesWs/getNameUserAdressesRequest" message="tns:getNameUserAdresses" />
+      <output wsam:Action="http://Services.com/CommandesWs/getNameUserAdressesResponse" message="tns:getNameUserAdressesResponse" />
+    </operation>
+    <operation name="deleteCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/deleteCategories" message="tns:deleteCategories" />
+    </operation>
+    <operation name="edtiCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/edtiCategories" message="tns:edtiCategories" />
+    </operation>
+    <operation name="commandesValider">
+      <input wsam:Action="http://Services.com/CommandesWs/commandesValiderRequest" message="tns:commandesValider" />
+      <output wsam:Action="http://Services.com/CommandesWs/commandesValiderResponse" message="tns:commandesValiderResponse" />
+    </operation>
+    <operation name="addLivraisonAdresse">
+      <input wsam:Action="http://Services.com/CommandesWs/addLivraisonAdresseRequest" message="tns:addLivraisonAdresse" />
+      <output wsam:Action="http://Services.com/CommandesWs/addLivraisonAdresseResponse" message="tns:addLivraisonAdresseResponse" />
+    </operation>
+    <operation name="deleteAdresses">
+      <input wsam:Action="http://Services.com/CommandesWs/deleteAdressesRequest" message="tns:deleteAdresses" />
+      <output wsam:Action="http://Services.com/CommandesWs/deleteAdressesResponse" message="tns:deleteAdressesResponse" />
+    </operation>
+    <operation name="DeleteCategories">
+      <input wsam:Action="http://Services.com/CommandesWs/DeleteCategoriesRequest" message="tns:DeleteCategories" />
+      <output wsam:Action="http://Services.com/CommandesWs/DeleteCategoriesResponse" message="tns:DeleteCategoriesResponse" />
+    </operation>
+    <operation name="deleteSouscat">
+      <input wsam:Action="http://Services.com/CommandesWs/deleteSouscatRequest" message="tns:deleteSouscat" />
+      <output wsam:Action="http://Services.com/CommandesWs/deleteSouscatResponse" message="tns:deleteSouscatResponse" />
+    </operation>
+    <operation name="getAllProduits_">
+      <input wsam:Action="http://Services.com/CommandesWs/getAllProduits_Request" message="tns:getAllProduits_" />
+      <output wsam:Action="http://Services.com/CommandesWs/getAllProduits_Response" message="tns:getAllProduits_Response" />
+    </operation>
+    <operation name="editCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/editCommandesRequest" message="tns:editCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/editCommandesResponse" message="tns:editCommandesResponse" />
+    </operation>
+    <operation name="DeleteProduits">
+      <input wsam:Action="http://Services.com/CommandesWs/DeleteProduitsRequest" message="tns:DeleteProduits" />
+      <output wsam:Action="http://Services.com/CommandesWs/DeleteProduitsResponse" message="tns:DeleteProduitsResponse" />
+    </operation>
+    <operation name="countCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/countCommandesRequest" message="tns:countCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/countCommandesResponse" message="tns:countCommandesResponse" />
+    </operation>
+    <operation name="AdresseLivraisons">
+      <input wsam:Action="http://Services.com/CommandesWs/AdresseLivraisonsRequest" message="tns:AdresseLivraisons" />
+      <output wsam:Action="http://Services.com/CommandesWs/AdresseLivraisonsResponse" message="tns:AdresseLivraisonsResponse" />
+    </operation>
+    <operation name="countJCommandes">
+      <input wsam:Action="http://Services.com/CommandesWs/countJCommandesRequest" message="tns:countJCommandes" />
+      <output wsam:Action="http://Services.com/CommandesWs/countJCommandesResponse" message="tns:countJCommandesResponse" />
+    </operation>
+    <operation name="SousCategoriesArray">
+      <input wsam:Action="http://Services.com/CommandesWs/SousCategoriesArrayRequest" message="tns:SousCategoriesArray" />
+      <output wsam:Action="http://Services.com/CommandesWs/SousCategoriesArrayResponse" message="tns:SousCategoriesArrayResponse" />
+    </operation>
+  </portType>
+  <binding name="CommandesWsPortBinding" type="tns:CommandesWs">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getAllUtilisateursadresses">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SearchCommandesDetails">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllCategoriesAdmin">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="RecuperationCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SearchAdresseLivraison">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllPages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ListSousCat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editSouscat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllTva">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllMedia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddMedia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addSouscat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findSouscat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="searchMedia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editMedia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="FindProduit">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AdminVerify">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteMedia">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findCommands">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ComparaisonProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllUtilisateurs">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AdresseLivraison">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SearchCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SearchProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="ProduitsArray">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="verificationUser">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="findCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AdressesFacturations">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AddCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getNameUserAdresses">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="edtiCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+    </operation>
+    <operation name="commandesValider">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="addLivraisonAdresse">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteAdresses">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteCategories">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="deleteSouscat">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getAllProduits_">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="editCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="DeleteProduits">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="AdresseLivraisons">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="countJCommandes">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="SousCategoriesArray">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="CommandesWs">
+    <port name="CommandesWsPort" binding="tns:CommandesWsPortBinding">
+      <soap:address location="http://djazzjah:8080/BackEndWs/CommandesWs" />
+    </port>
+  </service>
+</definitions>
